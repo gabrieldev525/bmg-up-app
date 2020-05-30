@@ -12,7 +12,7 @@ export default function Routes() {
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Initial" component={Initial} />
-                <AppStack.Screen name="Detail" component={List} />
+                <AppStack.Screen name="List" component={List} />
             </AppStack.Navigator>
         </NavigationContainer>
     );

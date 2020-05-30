@@ -1,5 +1,5 @@
 import React from 'react';
-import { Feather, FontAwesome } from '@expo/vector-icons'
+import { Feather, FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles';

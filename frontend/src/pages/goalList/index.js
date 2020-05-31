@@ -5,7 +5,7 @@ import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import AppHeader from '../../components/header';
 import styles from './styles';
 
-export default function List() {
+export default function GoalList() {
   const navigation = useNavigation();
 
   function navigateToHome() {

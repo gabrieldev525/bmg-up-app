@@ -51,7 +51,7 @@ export default function Form() {
                             selectedValue={type}
                             style={styles.picker}
                             onValueChange={(itemValue, itemIndex) =>
-                                setState({language: itemValue})
+                                setType({language: itemValue})
                             }>
                             <Picker.Item label="Automóvel" value="automóvel" />
                             <Picker.Item label="Casa" value="casa" />

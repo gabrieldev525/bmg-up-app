@@ -14,8 +14,12 @@ export default StyleSheet.create({
         color: '#fe9a2e',
     },
 
+    radioButton: {
+        paddingTop: 30,
+    },
+
     paragraph: {
-        paddingTop: 70,
+        paddingTop: 20,
     },
 
     button: {

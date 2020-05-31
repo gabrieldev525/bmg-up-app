@@ -32,10 +32,15 @@ export default function Initial() {
             <Text style={styles.value}>R$1.659,85</Text>
             <Text style={styles.balance}>Saldo disponível</Text>
           </View>
-          <Feather
+          <Feather.Button
             name="user"
             size={40}
             color="white"
+            backgroundColor='transparent'
+            style={{ padding: 0 }}
+            onPress={() => {
+              navigation.navigate('Profile')
+            }}
           />
         </View>
 

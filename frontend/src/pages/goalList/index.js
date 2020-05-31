@@ -1,10 +1,11 @@
 import React from 'react';
-import { Feather, FontAwesome } from '@expo/vector-icons'
+import { Feather, FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Text, View, TouchableOpacity, FlatList } from 'react-native';
+import AppHeader from '../../components/header';
 import styles from './styles';
 
-export default function List() {
+export default function GoalList() {
   const navigation = useNavigation();
 
   function navigateToHome() {
@@ -13,18 +14,7 @@ export default function List() {
   
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-      <TouchableOpacity 
-          style={styles.button} 
-          onPress={navigateToHome}
-        >
-          <Feather
-            name="chevron-left"
-            size={28}
-            color="#fff"
-          />
-        </TouchableOpacity>
-      </View>
+      <AppHeader />
       <View style={styles.content}>
         <Text style={styles.value}>R$1.659,85</Text>
         <Text style={styles.balance}>Saldo disponível</Text>

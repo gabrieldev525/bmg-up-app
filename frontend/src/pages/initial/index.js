@@ -6,7 +6,8 @@ import {
   FlatList,
   TextInput,
   ScrollView,
-  Image
+  Image,
+  Button
 } from 'react-native';
 import { Feather, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -129,11 +130,10 @@ export default function Initial() {
                     />
                     <Text style={styles.titleOptions}>{item.name}</Text>
                   </TouchableOpacity>
-              )}
-          />
+              )} />
         </View>
-
-        <View>
+        </View>
+        <View style={{ width: '100%', padding: 30 }}>
           <View>
             <Text style={styles.textHeaderContent}>Precisa de Ajuda?</Text>
             <Text>Converse com a duda? ela irá lhe ajudar!</Text>
@@ -147,12 +147,11 @@ export default function Initial() {
                   autoCapitalize='words'
                   autoCorrect={false}
               />
-              <TouchableOpacity style={styles.loadButton}>
-                  <MaterialIcons name="input" size={20} color='#000' />
-              </TouchableOpacity>
+              <Button
+                title='Enviar'
+                color='#F6931F' />
           </View>
         </View>
-      </View>
     </ScrollView>
   );
 }

@@ -23,14 +23,13 @@ export default StyleSheet.create({
     },
 
     button: {
-        position: "absolute",
-        bottom: 30,
         backgroundColor: '#fe9a2e',
         height: 50,
         width: 200,
         borderRadius: 15,
         alignItems: "center",
         justifyContent: "center",
+        marginTop: 20
     },
 
     textButton: {

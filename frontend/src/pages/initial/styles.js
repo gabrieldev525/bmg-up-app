@@ -54,7 +54,8 @@ export default StyleSheet.create({
     },
 
     textHeaderContent: {
-      fontSize: 20
+      fontSize: 20,
+      color: '#000'
     },
 
     textBlogButton: {
@@ -93,7 +94,7 @@ export default StyleSheet.create({
       marginBottom: 10,
       marginHorizontal: 5,
     },
-    
+
     titleOptions: {
       color: '#fe9a2e',
       paddingLeft: 10,
@@ -126,4 +127,3 @@ export default StyleSheet.create({
     },
 
 });
-

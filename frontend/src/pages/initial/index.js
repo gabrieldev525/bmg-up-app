@@ -5,7 +5,9 @@ import {
   TouchableOpacity,
   FlatList,
   TextInput,
-  ScrollView } from 'react-native';
+  ScrollView,
+  Image
+} from 'react-native';
 import { Feather, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
@@ -72,16 +74,34 @@ export default function Initial() {
             </TouchableOpacity>
           </View>
           <View style={styles.subContent}>
-            <MaterialIcons
-              name="image"
-              size={50}
-            />
+            <Image style={{ width: 80, height: 80 }} source={require('../../../assets/img_01.png')}>
+
+            </Image>
             <View style={styles.textSubContent}>
               <Text style={styles.titleSubContent}>Aprenda sobre o tesouro selic</Text>
               <Text style={styles.descriptionSubContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
               <TouchableOpacity>
                 <Text style={styles.textBlogButton}>Ver mais</Text>
               </TouchableOpacity>
+            </View>
+          </View>
+
+          <View>
+            <View style={styles.headerContent}>
+              <Text style={styles.textHeaderContent}>Conteúdos para você</Text>
+              <TouchableOpacity>
+                <Text style={styles.textBlogButton}>Visitar blog</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.subContent}>
+              <Image style={{ width: 80, height: 80 }} source={require('../../../assets/img_02.png')}></Image>
+              <View style={styles.textSubContent}>
+                <Text style={styles.titleSubContent}>Aprenda sobre o tesouro selic</Text>
+                <Text style={styles.descriptionSubContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+                <TouchableOpacity>
+                  <Text style={styles.textBlogButton}>Ver mais</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
 
@@ -105,7 +125,9 @@ export default function Initial() {
                   </TouchableOpacity>
               )}
           />
+        </View>
 
+        <View>
           <View>
             <Text style={styles.textHeaderContent}>Precisa de Ajuda?</Text>
             <Text>Converse com a duda? ela irá lhe ajudar!</Text>

@@ -13,7 +13,6 @@ import InvestDetail from './pages/investDetail';
 import Simulation from './pages/simulation';
 import Form from './pages/form';
 
-
 const AppStack = createStackNavigator();
 
 export default function Routes() {

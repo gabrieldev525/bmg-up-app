@@ -5,6 +5,12 @@ import { Text, View, TouchableOpacity} from 'react-native';
 import styles from './styles';
 
 export default function AppHeader() {
+    const navigation = useNavigation();
+
+    function navigateToHome() {
+        navigation.navigate('Initial')
+    }
+    
     return(
         <View style={styles.header}>
             <TouchableOpacity  

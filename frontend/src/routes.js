@@ -16,6 +16,7 @@ import QuizPage2 from './pages/quiz/Page_2';
 import QuizPage3 from './pages/quiz/Page_3';
 import QuizPage4 from './pages/quiz/Page_4';
 import Profile from './pages/profile'
+import Splash from './pages/splash'
 
 const AppStack = createStackNavigator();
 
@@ -23,8 +24,9 @@ export default function Routes() {
     return (
         <NavigationContainer>
             <AppStack.Navigator
-                initialRouteName='Initial'
+                initialRouteName='Splash'
                 screenOptions={{ headerShown: false }}>
+                <AppStack.Screen name="Splash" component={Splash} />
                 <AppStack.Screen name="StoreValue" component={StoreValue} />
                 <AppStack.Screen name="RescueValue" component={RescueValue} />
                 <AppStack.Screen name="InvestDetail" component={InvestDetail} />

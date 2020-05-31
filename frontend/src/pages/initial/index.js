@@ -5,7 +5,10 @@ import {
   TouchableOpacity,
   FlatList,
   TextInput,
-  ScrollView } from 'react-native';
+  ScrollView,
+  Image,
+  Button
+} from 'react-native';
 import { Feather, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
@@ -14,10 +17,10 @@ export default function Initial() {
   const navigation = useNavigation();
 
   const categoria = [
-        {id: '1', name: 'Simular investimentos'},
-        {id: '2', name: 'Gerenciar saldo'},
-        {id: '3', name: 'Negociação de dívida'},
-        {id: '4', name: 'Gerenciar saldo'},
+        {id: '1', name: 'Simular investimentos', to: 'InvestList'},
+        {id: '2', name: 'Gerenciar saldo', to: 'GoalList'},
+        {id: '3', name: 'Depoimentos', to: ''},
+        {id: '4', name: 'Quiz diário', to: 'QuizPage1'},
     ]
 
   function navigateToList() {
@@ -32,14 +35,23 @@ export default function Initial() {
             <Text style={styles.value}>R$1.659,85</Text>
             <Text style={styles.balance}>Saldo disponível</Text>
           </View>
-          <Feather
+          <Feather.Button
             name="user"
             size={40}
             color="white"
+            backgroundColor='transparent'
+            style={{ padding: 0 }}
+            onPress={() => {
+              navigation.navigate('Profile')
+            }}
           />
         </View>
 
-        <View style={styles.bankAccount}>
+        <TouchableOpacity
+          style={styles.bankAccount}
+          onPress={() => {
+            navigation.navigate('GoalList')
+          }}>
           <View style={styles.dollarDescription}>
             <FontAwesome
               name="dollar"
@@ -56,7 +68,7 @@ export default function Initial() {
             size={28}
             color="white"
           />
-        </View>
+        </TouchableOpacity>
 
 
         <View style={styles.bodyContent}>
@@ -67,16 +79,34 @@ export default function Initial() {
             </TouchableOpacity>
           </View>
           <View style={styles.subContent}>
-            <MaterialIcons
-              name="image"
-              size={50}
-            />
+            <Image style={{ width: 80, height: 80 }} source={require('../../../assets/img_01.png')}>
+
+            </Image>
             <View style={styles.textSubContent}>
               <Text style={styles.titleSubContent}>Aprenda sobre o tesouro selic</Text>
               <Text style={styles.descriptionSubContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
               <TouchableOpacity>
                 <Text style={styles.textBlogButton}>Ver mais</Text>
               </TouchableOpacity>
+            </View>
+          </View>
+
+          <View>
+            <View style={styles.headerContent}>
+              <Text style={styles.textHeaderContent}>Conteúdos para você</Text>
+              <TouchableOpacity>
+                <Text style={styles.textBlogButton}>Visitar blog</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.subContent}>
+              <Image style={{ width: 80, height: 80 }} source={require('../../../assets/img_02.png')}></Image>
+              <View style={styles.textSubContent}>
+                <Text style={styles.titleSubContent}>Aprenda sobre o tesouro selic</Text>
+                <Text style={styles.descriptionSubContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+                <TouchableOpacity>
+                  <Text style={styles.textBlogButton}>Ver mais</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
 
@@ -88,7 +118,9 @@ export default function Initial() {
               keyExtractor={item => item.id}
               renderItem={({ item }) => (
                   <TouchableOpacity
-                      onPress={() => {}}
+                      onPress={() => {
+                        navigation.navigate(item.to)
+                      }}
                       style={styles.options}
                   >
                     <FontAwesome
@@ -98,9 +130,10 @@ export default function Initial() {
                     />
                     <Text style={styles.titleOptions}>{item.name}</Text>
                   </TouchableOpacity>
-              )}
-          />
-
+              )} />
+        </View>
+        </View>
+        <View style={{ width: '100%', padding: 30 }}>
           <View>
             <Text style={styles.textHeaderContent}>Precisa de Ajuda?</Text>
             <Text>Converse com a duda? ela irá lhe ajudar!</Text>
@@ -114,12 +147,11 @@ export default function Initial() {
                   autoCapitalize='words'
                   autoCorrect={false}
               />
-              <TouchableOpacity style={styles.loadButton}>
-                  <MaterialIcons name="input" size={20} color='#000' />
-              </TouchableOpacity>
+              <Button
+                title='Enviar'
+                color='#F6931F' />
           </View>
         </View>
-      </View>
     </ScrollView>
   );
 }

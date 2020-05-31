@@ -25,10 +25,9 @@ export default function ValueDetail() {
                     />
                 </TouchableOpacity>
             </View>
-            <ScrollView 
+            <ScrollView
                 style={styles.content}
-                showsVerticalScrollIndicator={false}
-            >
+                showsVerticalScrollIndicator={false}>
                 <View style={styles.balanceContainer}>
                     <View style={styles.balance}>
                         <Text style={styles.buyGoalText}>R$ 1.659,85</Text>
@@ -39,9 +38,13 @@ export default function ValueDetail() {
                         <Text style={styles.descriptionGoal}>Saldo guardado</Text>
                     </View>
                 </View>
-                <TouchableOpacity style={styles.orangeButton}>
+                <TouchableOpacity
+                    style={styles.orangeButton}
+                    onPress={() => {
+                        navigation.navigate('StoreValue')
+                    }}>
                     <View style={styles.iconContainer}>
-                        <FontAwesome 
+                        <FontAwesome
                             name="dollar"
                             size={20}
                         />
@@ -53,12 +56,12 @@ export default function ValueDetail() {
                         color="#fff"
                     />
                 </TouchableOpacity>
-                <Text style={styles.title}>Histórico de depósitos mensais</Text>
+                {/* <Text style={styles.title}>Histórico de depósitos mensais</Text>
                 <View style={styles.chart}>
 
-                </View>
+                </View> */}
                 <Text style={styles.title}>Registro de transações</Text>
-                <FlatList 
+                <FlatList
                     data={[1, 2, 3, 4, 5]}
                     keyExtractor={incident => String(incident)}
                     showsVerticalScrollIndicator={false}
@@ -66,7 +69,7 @@ export default function ValueDetail() {
                     renderItem={() => (
                         <View style={styles.registerContainer}>
                             <View style={styles.descriptionContainer}>
-                                <FontAwesome 
+                                <FontAwesome
                                 name="dollar"
                                 size={20}
                                 />

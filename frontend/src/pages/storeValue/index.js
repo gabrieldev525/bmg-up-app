@@ -8,14 +8,13 @@ export default function StoreValue() {
   const navigation = useNavigation();
 
   function navigateToList() {
-    navigation.navigate('List')
+    navigation.navigate('ValueDetail')
   }
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity 
-          style={styles.button} 
+        <TouchableOpacity
+          style={styles.button}
           onPress={() => {}}
         >
           <Feather
@@ -35,7 +34,7 @@ export default function StoreValue() {
           </TouchableOpacity>
         </View>
       </View>
-      
+
     </View>
   );
 }

@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Initial from './pages/initial';
 import List from './pages/list';
 import Simulation from './pages/simulation';
+import Form from './pages/form';
+
 
 const AppStack = createStackNavigator();
 
@@ -12,9 +14,10 @@ export default function Routes() {
     return (
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
-                <AppStack.Screen name="Simulation" component={Simulation} />
                 <AppStack.Screen name="Initial" component={Initial} />
                 <AppStack.Screen name="List" component={List} />
+                <AppStack.Screen name="Simulation" component={Simulation} />
+                <AppStack.Screen name="Form" component={Form} />
             </AppStack.Navigator>
         </NavigationContainer>
     );

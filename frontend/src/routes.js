@@ -11,6 +11,7 @@ import ValueDetail from './pages/valueDetail';
 import InvestDetail from './pages/investDetail';
 import Simulation from './pages/simulation';
 import Form from './pages/form';
+import Depositions from './pages/depositions'
 
 const AppStack = createStackNavigator();
 
@@ -29,6 +30,7 @@ export default function Routes() {
                 <AppStack.Screen name="GoalList" component={GoalList} />
                 <AppStack.Screen name="Simulation" component={Simulation} />
                 <AppStack.Screen name="Form" component={Form} />
+                <AppStack.Screen name="Depositions" component={Depositions} />                
             </AppStack.Navigator>
         </NavigationContainer>
     );

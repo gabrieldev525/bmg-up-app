@@ -25,7 +25,7 @@ export default function InvestDetail() {
                     />
                 </TouchableOpacity>
             </View>
-            <ScrollView 
+            <ScrollView
                 style={styles.content}
                 showsVerticalScrollIndicator={false}
             >
@@ -39,9 +39,13 @@ export default function InvestDetail() {
                         <Text style={styles.descriptionGoal}>Rendimento no mês</Text>
                     </View>
                 </View>
-                <TouchableOpacity style={styles.orangeButton}>
+                <TouchableOpacity
+                    style={styles.orangeButton}
+                    onPress={() => {
+                        navigation.navigate('RescueValue')
+                    }}>
                     <View style={styles.iconContainer}>
-                        <FontAwesome 
+                        <FontAwesome
                             name="dollar"
                             size={20}
                         />
@@ -53,12 +57,12 @@ export default function InvestDetail() {
                         color="#fff"
                     />
                 </TouchableOpacity>
-                <Text style={styles.title}>Histórico de rendimentos mensais</Text>
+                {/* <Text style={styles.title}>Histórico de rendimentos mensais</Text>
                 <View style={styles.chart}>
 
-                </View>
+                </View> */}
                 <Text style={styles.title}>Registro de transações</Text>
-                <FlatList 
+                <FlatList
                     data={[1, 2, 3, 4, 5]}
                     keyExtractor={incident => String(incident)}
                     showsVerticalScrollIndicator={false}
@@ -66,7 +70,7 @@ export default function InvestDetail() {
                     renderItem={() => (
                         <View style={styles.registerContainer}>
                             <View style={styles.descriptionContainer}>
-                                <FontAwesome 
+                                <FontAwesome
                                 name="dollar"
                                 size={20}
                                 />

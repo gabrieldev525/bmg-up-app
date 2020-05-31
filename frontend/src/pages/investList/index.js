@@ -10,12 +10,12 @@ export default function InvestList() {
   function navigateToHome() {
     navigation.navigate('Initial')
   }
-  
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-      <TouchableOpacity 
-          style={styles.button} 
+      <TouchableOpacity
+          style={styles.button}
           onPress={navigateToHome}
         >
           <Feather
@@ -31,18 +31,28 @@ export default function InvestList() {
         <Text style={styles.balance}>Saldo disponível</Text>
         <View style={styles.addGoalsContainer}>
           <Text style={styles.goalText}>Meus investimentos</Text>
-          <Feather
+          <Feather.Button
             name="plus"
             size={28}
+            backgroundColor='transparent'
+            color='black'
+            onPress={() => {
+              navigation.navigate('Simulation')
+            }}
+            style={{ padding: 0 }}
           />
         </View>
-        
-          <FlatList 
+
+          <FlatList
             data={[1, 2, 3, 4, 5, 6]}
             keyExtractor={incident => String(incident)}
             showsVerticalScrollIndicator={false}
             renderItem={() => (
-              <View style={styles.goalContainer}>
+              <TouchableOpacity
+                style={styles.goalContainer}
+                onPress={() => {
+                  navigation.navigate('InvestDetail')
+                }}>
                 <View style={styles.descriptionContainer}>
                   <Text>Tesouro prefixado 2026</Text>
                 </View>
@@ -53,7 +63,7 @@ export default function InvestList() {
                     size={28}
                   />
                 </View>
-              </View>
+              </TouchableOpacity>
             )}
           />
       </View>

@@ -13,7 +13,7 @@ export default StyleSheet.create({
         fontSize: 20,
         marginBottom: 30,
     },
-    
+
     label: {
         paddingBottom: 5,
     },
@@ -49,7 +49,7 @@ export default StyleSheet.create({
             height: 4,
         },
         elevation: 2,
-        
+
     },
 
     textarea: {
@@ -72,7 +72,7 @@ export default StyleSheet.create({
         alignItems: "center",
         paddingBottom: 20,
     },
-    
+
     button: {
         padding: 8,
         height: 50,
@@ -86,5 +86,5 @@ export default StyleSheet.create({
     textButton: {
         color: 'white',
         fontSize: 17,
-    }    
+    }
 });

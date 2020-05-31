@@ -16,10 +16,10 @@ export default function Initial() {
   const navigation = useNavigation();
 
   const categoria = [
-        {id: '1', name: 'Simular investimentos'},
-        {id: '2', name: 'Gerenciar saldo'},
-        {id: '3', name: 'Negociação de dívida'},
-        {id: '4', name: 'Gerenciar saldo'},
+        {id: '1', name: 'Simular investimentos', to: 'InvestList'},
+        {id: '2', name: 'Gerenciar saldo', to: 'GoalList'},
+        {id: '3', name: 'Depoimentos', to: ''},
+        {id: '4', name: 'Quiz diário', to: 'QuizPage1'},
     ]
 
   function navigateToList() {
@@ -46,7 +46,11 @@ export default function Initial() {
           />
         </View>
 
-        <View style={styles.bankAccount}>
+        <TouchableOpacity
+          style={styles.bankAccount}
+          onPress={() => {
+            navigation.navigate('GoalList')
+          }}>
           <View style={styles.dollarDescription}>
             <FontAwesome
               name="dollar"
@@ -63,7 +67,7 @@ export default function Initial() {
             size={28}
             color="white"
           />
-        </View>
+        </TouchableOpacity>
 
 
         <View style={styles.bodyContent}>
@@ -113,7 +117,9 @@ export default function Initial() {
               keyExtractor={item => item.id}
               renderItem={({ item }) => (
                   <TouchableOpacity
-                      onPress={() => {}}
+                      onPress={() => {
+                        navigation.navigate(item.to)
+                      }}
                       style={styles.options}
                   >
                     <FontAwesome

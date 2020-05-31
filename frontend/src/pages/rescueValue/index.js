@@ -8,14 +8,14 @@ export default function RescueValue() {
   const navigation = useNavigation();
 
   function navigateToList() {
-    navigation.navigate('List')
+    navigation.navigate('InvestDetail')
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity 
-          style={styles.button} 
+        <TouchableOpacity
+          style={styles.button}
           onPress={() => {}}
         >
           <Feather
@@ -35,7 +35,7 @@ export default function RescueValue() {
           </TouchableOpacity>
         </View>
       </View>
-      
+
     </View>
   );
 }

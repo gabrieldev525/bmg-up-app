@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "BMG UP",
-    "slug": "BMG UP",
+    "name": "BMG-UP",
+    "slug": "BMG_UP",
     "platforms": [
       "ios",
       "android",

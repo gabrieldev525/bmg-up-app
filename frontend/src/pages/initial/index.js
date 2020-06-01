@@ -17,9 +17,10 @@ export default function Initial() {
   const navigation = useNavigation();
 
   const categoria = [
-        {id: '1', name: 'Simular investimentos', to: 'InvestList'},
+        {id: '1', name: 'Simular investimentos', to: 'Simulation'},
         {id: '2', name: 'Gerenciar saldo', to: 'GoalList'},
-        {id: '3', name: 'Depoimentos', to: ''},
+        {id: '3', name: 'Depoimentos', to: 'Depositions'},
+        {id: '4', name: 'Gerenciar investimentos', to: 'InvestList'},
         {id: '4', name: 'Quiz diário', to: 'QuizPage1'},
     ]
 

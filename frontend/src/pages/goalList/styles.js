@@ -4,8 +4,7 @@ import Constants from 'expo-constants';
 export default StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      paddingTop: Constants.statusBarHeight,
+      backgroundColor: '#fff'
     },
 
     header: {
@@ -13,7 +12,7 @@ export default StyleSheet.create({
       width: "100%",
       backgroundColor: '#fe9a2e',
       justifyContent: "center",
-      paddingHorizontal: 10, 
+      paddingHorizontal: 10,
     },
 
     content: {

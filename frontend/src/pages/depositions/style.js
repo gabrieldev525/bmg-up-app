@@ -27,11 +27,11 @@ export default StyleSheet.create({
   },
   containerUser: {
     width: '90%',
-    height: '35%',
+    paddingVertical: 10,
     marginBottom: '5%',
     marginLeft: 20,
-    borderRadius: 1,
-    elevation: 1,
+    borderRadius: 14,
+    elevation: 2,
   },
   ImageAvatar: {
     width: 100,

@@ -13,6 +13,7 @@ To see more screen, access the [Prototype](https://www.figma.com/file/Q7Jl4pjk7T
 
 ### Requirements
 - Expo CLI
+- Node JS
 
 ### How to run?
 ```
